@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 1.2fr 4fr 4fr;
+}
+
+.sidebar {
+  background-color: #1992d4;
+  grid-column: 1/2;
+  grid-row: 1 / end;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: start;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.sidebar h3 {
+  color: white;
+}
+
+.sidebar img {
+  height: 40px;
+  width: 40px;
+  filter: brightness(0) invert(1);
+}
+.dashboard {
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li {
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  color: white;
+}
+.sidebar ul li:hover {
+  color: black;
+}
+.sidebar ul li img {
+  filter: brightness(0) invert(1);
+  height: 20px;
+  width: 20px;
+}
+.projects {
+  background-color: #e2e8f0;
+  grid-column: 2 / 3;
+  grid-row: 3 / end;
+}
+.navbar {
+  grid-column: 2 / end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .search-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 32px;
+  gap: 8px;
+}
+
+.navbar .search-logo img {
+  height: 20px;
+  width: 20px;
+}
+.navbar .profile {
+  font-weight: 700;
+}
+.navbar input {
+  background-color: #e2e8f0;
+  border-radius: 16px;
+  border-color: transparent;
+  width: 600px;
+  height: 22px;
+}
+.littlebell img {
+  height: 20px;
+  width: 20px;
+}
+.navbar .rightside {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.little-pic img {
+  margin-top: 8px;
+  height: 50px;
+  width: 50px;
+}
+.navbar input:focus {
+  border: transparent;
+}
+.header {
+  grid-column: 2 / end;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+}
+.header .leftside {
+  display: flex;
+  gap: 12px;
+  margin-left: 8px;
+  align-items: center;
+}
+.header .leftside img {
+  height: 70px;
+  width: 70px;
+}
+.textalignement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rightside {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 64px;
+}
+.hithere {
+  align-self: baseline;
+}
+.announcements {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.trending {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+button.qwada {
+  width: 85px;
+  height: 33px;
+  border-radius: 20px;
+  background-color: #1992d4;
+  color: white;
+  border-color: transparent;
+}
