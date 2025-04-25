@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr 1.2fr 4fr 4fr;
-  background: #bfbea4;
+
   background: linear-gradient(
     90deg,
     rgba(191, 190, 164, 1) 0%,
@@ -22,7 +22,7 @@
   grid-row: 1 / end;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 64px;
   align-items: start;
   padding-top: 15px;
   padding-left: 15px;
@@ -48,7 +48,7 @@
   gap: 16px;
   color: #8a6255;
 }
-.sidebar ul li:hover {
+.sidebar ul li.hovering:hover {
   color: black;
   filter: brightness(0);
 }
@@ -92,12 +92,9 @@
   left: 0;
   width: 10px;
   height: 100%;
-  background: #c69c93;
-  background: #c69c93;
-  background: linear-gradient(
-    0deg,
-    rgba(198, 156, 147, 1) 0%,
-    rgba(212, 201, 201, 1) 74%
+  background: var(
+    --color,
+    linear-gradient(0deg, rgba(198, 156, 147, 1) 0%, rgba(212, 201, 201, 1) 74%)
   );
   border-radius: 8px 0 0 8px; /* Rounded corners for the bar */
 }
@@ -112,8 +109,6 @@
 .card .options img {
   width: 25px;
   height: 25px;
-}
-.options div {
 }
 
 .card h3 {
@@ -152,6 +147,7 @@
   height: 20px;
   width: 20px;
   transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 .navbar .rightside {
   display: flex;
@@ -267,6 +263,7 @@ button.qwada {
   height: 33px;
   border-radius: 20px;
   background: #5c1717;
+  font-weight: 700;
 
   color: white;
   border-color: transparent;
