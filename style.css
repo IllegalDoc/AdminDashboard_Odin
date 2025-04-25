@@ -4,7 +4,8 @@
   font-family: "Roboto", sans-serif;
 }
 .container {
-  height: 100vh;
+  height: 140vh;
+  width: 110vw;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr 1.2fr 4fr 4fr;
@@ -43,6 +44,7 @@
 }
 .sidebar ul li:hover {
   color: black;
+  filter: brightness(0);
 }
 .sidebar ul li img {
   filter: brightness(0) invert(1);
@@ -53,6 +55,62 @@
   background-color: #e2e8f0;
   grid-column: 2 / 3;
   grid-row: 3 / end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.projects .projecto {
+  grid-column: 1 / 3;
+}
+.projects .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 16px;
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  justify-content: start;
+  border-radius: 16px;
+  gap: 16px;
+}
+.card p {
+  margin-left: 24px;
+  color: gray;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #ffc107,
+    #ff5722
+  ); /* Your left bar color */
+  border-radius: 8px 0 0 8px; /* Rounded corners for the bar */
+}
+.options {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  margin-right: 20px;
+  margin-top: 20px;
+  gap: 32px;
+}
+.card .options img {
+  width: 25px;
+  height: 25px;
+}
+.options div {
+}
+
+.card h3 {
+  margin-top: 32px;
+  margin-left: 24px;
 }
 .navbar {
   grid-column: 2 / end;
@@ -99,7 +157,7 @@
   width: 50px;
 }
 .navbar input:focus {
-  border: transparent;
+  outline: none;
 }
 .header {
   grid-column: 2 / end;
@@ -134,12 +192,58 @@
   align-self: baseline;
 }
 .announcements {
+  background-color: #e2e8f0;
   grid-column: 3/4;
   grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 12px;
+}
+.announcements h3 {
+  margin-top: 13px;
+}
+.announcements .news {
+  height: 300px;
+  width: 260px;
+  margin-right: 32px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.news .newsitems {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.news .newsitems h4 {
+  align-self: flex-start;
+}
+.line {
+  border-top: 1px solid gray; /* Thickness and color of the line */
+  /* Full width */
+  width: 80%;
+  margin: 10px;
+  align-self: center;
+
+  /* Space above and below the line */
+}
+.news p {
+  color: gray;
+  font-weight: 300;
+}
+.news div {
+  margin-left: 8px;
 }
 .trending {
   grid-column: 3/4;
   grid-row: 4/5;
+  background-color: #e2e8f0;
 }
 button.qwada {
   width: 85px;
