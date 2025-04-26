@@ -61,7 +61,7 @@
   grid-column: 2 / 3;
   grid-row: 3 / end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: 1fr 1fr;
 }
 .projects .projecto {
   margin-left: 26px;
