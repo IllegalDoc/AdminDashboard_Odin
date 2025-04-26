@@ -87,7 +87,7 @@ function switchToDark() {
 
   container.setAttribute(
     "style",
-    "background:none;background-image:url('icegif-942.gif'); width: 100%;   height: 100%;      background-size: cover;   background-repeat: no-repeat;  background-position: center; "
+    "backgroundColor:black;background-image:url('icegif-943.gif'); width: 100%;   height: 100%;      background-size: cover;   background-repeat: no-repeat;  background-position: center; "
   );
   modifyBeforeElement(
     " linear-gradient(3deg,rgba(173, 49, 49, 1) 0%, rgba(48, 38, 38, 1) 100%)"
